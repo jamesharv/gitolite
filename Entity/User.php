@@ -47,7 +47,10 @@ class User extends Entity
     public function deleteKey($reference)
     {
         $filename = $this->keyFilename($reference);
-        $this->getFile($filename)->setDeleted(TRUE);
+        $file = $this->getFile($filename);
+        if (!empty($file)) {
+          $file->setDeleted(TRUE);
+        }
     }
 
     /**
