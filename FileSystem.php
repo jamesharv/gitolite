@@ -109,10 +109,12 @@ class FileSystem
         $keyFilePaths = $this->findKeyFiles($username);
         $keyFiles = array();
 
-        foreach ($keyFilePaths as $keyFilePath) {
-            $file = $this->loadFile($keyFilePath);
-            if (!is_null($file)) {
-                $keyFiles[] = $file;
+        if ($keyFilePaths) {
+            foreach ($keyFilePaths as $keyFilePath) {
+                $file = $this->loadFile($keyFilePath);
+                if (!is_null($file)) {
+                    $keyFiles[] = $file;
+                }
             }
         }
 
