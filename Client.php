@@ -207,7 +207,7 @@ class Client
      */
     public function slug($string)
     {
-        return trim(preg_replace('#[^a-z0-9@._]+#', '-', $string), '-');
+        return trim(preg_replace('#\s+#', '-', $string), '-');
     }
 
     /**
