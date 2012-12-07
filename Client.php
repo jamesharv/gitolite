@@ -4,7 +4,7 @@
  *  Gitolite model class
  */
 namespace Gitolite;
-use Git\Repository;
+use Gitter\Repository;
 use Gitolite\Entity\Entity;
 
 class Client
