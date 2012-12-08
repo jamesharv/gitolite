@@ -1,0 +1,7 @@
+build/
+vendor/
+.DS_Store
+.Spotlight-V100
+.Trashes
+.*.swp
+composer.lock
